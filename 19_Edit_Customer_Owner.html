@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form action="19_Edit_Customer_Owner.php" method = "post">
+	<div class="container">
+		<h1>Edit Customer</h1>
+		
+		<div>
+			<label for="Fname"><b>First name</b></label>
+			<input type="text" placeholder="First name" name="Fname" >
+	
+			<label for="Lname"><b>Last name</b></label>
+			<input type="text" placeholder="Last name" name="Lname" >
+		</div><br>
+		
+		<div>
+			<label for="email"><b>Email</b></label>
+			<input type="text" placeholder="Enter Email" name="email" >
+		</div><br>
+		
+		<div>
+			<label for="Uname"><b>Username</b></label>
+			<input type="text" placeholder="Username" name="Uname" >
+		</div><br>
+		
+		<div>
+			<label for="psw"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="psw" >
+		</div><br>
+		
+		<div>
+			<label for="address"><b>Address</b></label>
+			<input type="text" placeholder="Your Address" name="address" >
+		</div><br>
+		
+		<div>
+			<label for="Phone"><b>Phone number</b></label>
+			<input type="text" placeholder="Phone number" name="Phone" >
+		</div><br>
+		
+		<input type="submit" value="Edit"/>
+
+		
+	</div>
+
+</form>
+</body>
+</html>
+<?php
+include "db_conn.php";
+include "18_Customer_Owner.php";
+$_POST['Fname'] = $_GET['first_name'];
+$_POST['Lname'] = $_GET['last_name'];
+$_POST['email'] = $_GET['email'];
+$_POST['Uname'] = $_GET['username'];
+$_POST['address'] = $_GET['customer_id'];
+echo $_POST['address'] = '123';
+//$_POST['Phone'] = $_GET$rowForEdit['customer_id']
+?>
